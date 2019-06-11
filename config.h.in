@@ -20,9 +20,10 @@
 #cmakedefine TESTING
 #cmakedefine DELETE_SIMPLICES
 
-#ifndef nullptr
-  #define nullptr NULL
-#endif
+// nullptr part of C++11.  Not a define.
+// #ifndef nullptr
+  // #define nullptr NULL
+// #endif
 
 #define TETHEX_VERSION "@TETHEX_VERSION_MAJOR@.@TETHEX_VERSION_MINOR@.@TETHEX_VERSION_PATCH@"
 
