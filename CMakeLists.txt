@@ -80,6 +80,12 @@ if(TESTING)
   target_link_libraries(${PROJECT_NAME} ${GTEST_LIB} pthread)
 endif()
 
+# --- install ---
+install(TARGETS ${PROJECT_NAME}
+  DESTINATION bin
+  PERMISSIONS OWNER_READ OWNER_EXECUTE OWNER_WRITE
+              GROUP_READ GROUP_EXECUTE
+)
 
 # --- packaging of the library ---
 set(PACKAGE_FILE_NAME
