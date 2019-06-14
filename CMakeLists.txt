@@ -67,7 +67,7 @@ if(NOT TESTING) # these strict compiling options don't work with GTest library
   message(STATUS "C++ compiler ID = ${CMAKE_CXX_COMPILER_ID}")
   if(${CMAKE_CXX_COMPILER_ID} STREQUAL "GNU")
     add_definitions("-Wall -Wextra -Wshadow -Weffc++ -ansi -pedantic -Werror")
-  else()
+  elseif(NOT WIN32)
     add_definitions("-Wall -pedantic -Werror")
   endif()
 endif()
