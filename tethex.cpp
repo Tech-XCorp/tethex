@@ -18,6 +18,7 @@
 #include <algorithm>
 #include <fstream>
 #include <cmath>
+#include <cstddef>
 
 namespace tethex {
 
@@ -505,8 +506,8 @@ IncidenceMatrix::IncidenceMatrix(int n_vertices,
                                  const std::vector<MeshElement*> &cells)
   : dim(n_vertices)
   , n_non_zero(0)
-  , row(nullptr)
-  , col(nullptr)
+  , row(0)
+  , col(0)
 {
   std::vector<int> *vec = new std::vector<int>[dim]; // for lower triangle
   // look through all mesh cells
